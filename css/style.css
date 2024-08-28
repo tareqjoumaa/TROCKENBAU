@@ -105,14 +105,14 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .btn-main, .btn-transparent, .btn-small {
-  background: #f75757;
+  background: #000000;
   color: #fff;
   transition: all 0.2s ease;
 }
 
 .btn-main:hover, .btn-transparent:hover, .btn-small:hover {
-  background: #dd0b0b;
-  color: #fff;
+  background: #d1960a;
+  color: #000000;
 }
 
 .btn-solid-border {
@@ -287,7 +287,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #f75757;
+  color: #d1960a;
   text-decoration: none;
 }
 
@@ -305,7 +305,7 @@ a:focus {
 }
 
 .page-title .block h1 {
-  color: #e10000;
+  color: #fff;
 }
 
 .page-title .block p {
@@ -531,6 +531,8 @@ ul.dropdown-menu li {
 .bg-1 {
   background: url("../images/bg/home-2.jpg") no-repeat 50% 50%;
   background-size: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+
 }
 
 .bg-2 {
