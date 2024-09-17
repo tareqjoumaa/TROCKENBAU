@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     
-    $content = "Name: $name\n";
+    $content = "Name: $ \n";
     $content .= "Email: $email\n\n";
     $content .= "Message:\n$message\n";
 

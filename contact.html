@@ -25,6 +25,31 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+<style>
+.bg-extra-1 {
+    background-color: #fff8ea !important;
+}
+
+@media (min-width: 992px) {
+    section {
+        padding-top: 7.5rem;
+        padding-bottom: 7.5rem;
+    }
+}
+section {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.icon-container {
+  transition: transform 0.5s ease-in-out;
+}
+
+.icon-container:hover {
+  transform: translateY(-15px);
+}
+
+</style>
 
 <body>
 
@@ -90,55 +115,47 @@
     </div>
   </div>
 </section>
-<!-- contact form start -->
-<section class="contact-form-wrap section">
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+  <section class="bg-extra-1 z-index--1 text-center" data-zanim-timeline='{"delay":0.6}' data-zanim-trigger="scroll">
     <div class="container">
-        <div class="row">
-            
-
-            <div class="col-lg-5 col-sm-12">
-                <div class="contact-content pl-lg-5 mt-5 mt-lg-0">
-                    <span class="text-muted">Wir sind Profis</span>
-                    <h2 class="mb-5 mt-2">Zögern Sie nicht, uns für jegliche Informationen zu kontaktieren</h2>
-
-                    <ul class="address-block list-unstyled">
-                      <li>
-                          <a href="https://www.google.com/maps?q=North+Main+Street,+Brooklyn+Australia" target="_blank" class="location-link" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                              <i class="ti-direction mr-3"></i>
-                              Gladbacher-Krefeld, Germany
-                          </a>
-                      </li>
-                      <li>
-                          <a href="mailto:info@gmail.com" class="email-link" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                              <i class="ti-email mr-3"></i>
-                              Email: info@gmail.com
-                          </a>
-                      </li>
-                      <li>
-                          <a href="tel:+4917620651796" class="phone-link" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                              <i class="ti-mobile mr-3"></i>
-                              Phone: +49-17620651796
-                          </a>
-                      </li>
-                  </ul>
-                  
-
-                    <ul class="social-icons list-inline mt-5">
-                        <li class="list-inline-item">
-                            <a href="http://www.themefisher.com"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="http://www.themefisher.com"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="http://www.themefisher.com"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <span class="text-muted">Wir sind Profis</span>
+      <h2 class="mb-5 mt-2" style="margin-bottom: 6rem !important">Zögern Sie nicht, uns für jegliche Informationen zu kontaktieren</h2>
+      <div class="row justify-content-between align-items-center">
+  
+        <div class="col-lg col-md-5 icon-container" data-zanim-xs='{"delay":0.2,"duration":1.5}'>
+          <img src="images/contact_svg/my-location.svg" alt="" />
+          <h6 class="fs-0 font-weight-bold text-white mb-0 mt-2" style="color: #242424 !important;">Address</h6>
+          <a href="https://www.google.com/maps?q=North+Main+Street,+Brooklyn+Australia" target="_blank" class="location-link" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+            Gladbacher-Krefeld, Germany
+          </a>
         </div>
+  
+        <div class="border-right border-900 position-relative d-none d-md-block" style="height:50px;width:1px"></div>
+  
+        <div class="col-lg col-md-5 icon-container" data-zanim-xs='{"delay":0.4,"duration":1.5}'>
+          <img src="images/contact_svg/headphone.svg" alt="" />
+          <h6 class="fs-0 font-weight-bold text-white mb-0 mt-2" style="color: #242424 !important;">telephone</h6>
+          <a href="tel:+4917620651796" class="phone-link" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+            +49-17620651796
+          </a>
+        </div>
+  
+        <div class="border-right border-900 position-relative d-none d-lg-block" style="height:50px;width:1px"></div>
+  
+        <div class="col-lg col-md-5 mt-md-4 mt-lg-0 icon-container" data-zanim-xs='{"delay":0.6,"duration":1.5}'>
+          <img src="images/contact_svg/mail.svg" alt="" />
+          <h6 class="fs-0 font-weight-bold text-white mb-0 mt-2" style="color: #242424 !important;">email</h6>
+          <a href="mailto:info@gmail.com" class="email-link" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
+            info@gmail.com
+          </a>
+        </div>
+  
+      </div>
     </div>
-</section>
+  </section>
+    <!-- ============================================-->
 
 <!-- footer Start -->
 <footer class="footer section">

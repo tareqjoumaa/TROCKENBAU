@@ -23,7 +23,543 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+<style>
+.about_section .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          margin-top: 30px;
+}
 
+.about_section .img-box {
+  position: relative;
+}
+
+.about_section .img-box trasns-img {
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.about_section .img-box::before, .about_section .img-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 70%;
+  background-color: #cba760;
+  z-index: 3;
+}
+
+.about_section .img-box::before {
+  left: 0;
+  z-index: 3;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.about_section .img-box::after {
+  right: 0;
+  z-index: 1;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.about_section .detail-box p {
+  color: #1f1f1f;
+  margin-top: 15px;
+}
+
+.about_section .detail-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #cba760;
+  color: #000000 !important;
+  border-radius: 12px; /* حواف سلسة */
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border: none;
+  margin-top: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.about_section .detail-box a:hover {
+  background-color: #cba760; /* تأثير تغيير اللون عند التمرير */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* تأثير ظل أكبر عند التمرير */
+  transform: translateY(-5px); /* تأثير رفع عند التمرير */
+}
+
+.about_section .detail-box a:hover {
+  background-color: #cba760;
+}
+
+/* الستايل الافتراضي للهيدر */
+.site-navbar {
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.about_section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.about_section .detail-box {
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.about_section .detail-box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.about_section .heading_container h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.about_section .img-box trasns-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_section .img-box trasns-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about_section a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #cba760;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+.core_values_section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.core_values_section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.core_values_section .row {
+  display: flex;
+  align-items: center;
+}
+
+.core_values_section .text-box {
+  padding: 20px;
+}
+
+.core_values_section .text-box h2 {
+  color: #cba760;
+  margin-bottom: 20px;
+}
+
+.core_values_section .text-box p {
+  color: #1f1f1f;
+  margin-bottom: 20px;
+}
+
+.core_values_section .text-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.core_values_section .text-box ul li {
+  margin-bottom: 10px;
+  color: #1f1f1f;
+}
+
+.core_values_section .text-box ul li strong {
+  color: #cba760;
+}
+
+.core_values_section .image-box {
+  text-align: center;
+}
+
+.core_values_section .image-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.core-values-image {
+  /* Animation effect for the image */
+  animation-name: fadeInLeft;
+}
+
+.core-values-text {
+  /* Animation effect for the text */
+  animation-name: fadeInRight;
+}
+
+/* Ensure the image appears on the left and text on the right */
+@media (min-width: 768px) {
+  .core_values_section .row {
+    flex-direction: row;
+  }
+}
+
+
+
+.core_values_section .image-box {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  border: 5px solid #cba760;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensure child elements do not overflow the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.core_values_section .image-box:hover {
+  transform: scale(1.05); /* Slightly scale up the image box on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.core_values_section .image-box img {
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition for image effects */
+}
+
+.core_values_section .image-box:hover img {
+  transform: scale(1.02); /* Slightly scale up the image on hover */
+}
+
+.core_values_section .image-box::before,
+.core_values_section .image-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  pointer-events: none; /* Ensure the pseudo-elements do not interfere with clicks */
+}
+
+
+.about_section {
+  padding: 60px 0;
+  background-color: #fff8ea;
+}
+
+.about_section .detail-box {
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.about_section .detail-box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.about_section .heading_container h2 {
+  font-size: 28px;
+  color: #cba760;
+}
+
+/* إضافة تأثير الظلال */
+.about_section .detail-box {
+  padding: 20px;
+  background-color: #fff8ea;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* تأثير عند التمرير (Hover Effect) */
+.about_section .detail-box:hover {
+  transform: translateY(-10px); /* رفع العنصر عند التمرير */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* تعزيز الظل عند التمرير */
+}
+
+/* تأثير النص عند التمرير */
+.about_section .detail-box h2,
+.about_section .detail-box p,
+.about_section .detail-box a {
+  transition: color 0.3s ease;
+}
+
+/* تغيير لون النص عند التمرير */
+.about_section .detail-box:hover h2
+{
+  color: #d1960a; /* تغيير لون النص */
+
+}
+.about_section .detail-box:hover p
+{
+  color: #000000; /* تغيير لون النص */
+  font-weight: 400;
+
+}
+.about_section .detail-box:hover a {
+  color: #cba760; /* تغيير لون النص */
+}
+
+/* تنسيق الرابط */
+.about_section .detail-box a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* تأثير على الرابط عند التمرير */
+.about_section .detail-box a:hover {
+  color: #000000; /* تغيير لون الرابط عند التمرير */
+}
+
+
+
+/* إضافة تأثير الظلال */
+.core-values-text .text-box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* تأثير عند التمرير (Hover Effect) */
+.core-values-text .text-box:hover {
+  transform: translateY(-10px); /* رفع العنصر عند التمرير */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* تعزيز الظل عند التمرير */
+}
+
+/* تأثير النص عند التمرير */
+.core-values-text .text-box h2,
+.core-values-text .text-box p,
+.core-values-text .text-box ul li {
+  transition: color 0.3s ease;
+}
+
+/* تغيير لون النص عند التمرير */
+.core-values-text .text-box:hover h2,
+.core-values-text .text-box:hover p,
+.core-values-text .text-box:hover ul li {
+  color: #cba760; /* تغيير لون النص */
+}
+
+
+
+
+/* Styling for the services section */
+.site-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+/* Hero 1 */
+#hero {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/tapazen1.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changeImages 7s infinite;
+}
+
+@keyframes changeImages {
+  0%, 100% {
+    background: url("images/services/tapazen1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  33% {
+    background: url("images/services/tapazen2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  66% {
+    background: url("images/services/tapazen3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+}
+ 
+/* hero 2 */
+#section2 {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/frabzen3.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changesection2Images 7s infinite;
+}
+
+@keyframes changesection2Images {
+  0%, 100% {
+    background: url("images/services/frabzen3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  33% {
+    background: url("images/services/frabzen2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  66% {
+    background: url("images/services/frabzen1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+}
+
+/* hero 3 */
+#section3 {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/Rigips1.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changeservice3Images 7s infinite;
+}
+
+@keyframes changeservice3Images {
+  0%, 100% {
+    background: url("images/services/Rigips1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  33% {
+    background: url("images/services/Rigips2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  66% {
+    background: url("images/services/Rigips3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+} 
+
+/* hero 4 */
+#section4 {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/Laminat1.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changeservice4Images 7s infinite;
+}
+
+@keyframes changeservice4Images {
+  0%, 100% {
+    background: url("images/services/Laminat1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  33% {
+    background: url("images/services/Laminat2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  66% {
+    background: url("images/services/Laminat3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+} 
+
+/* hero 5 */
+#section5 {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/Spachtelarbeiten1.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changesection5Images 7s infinite;
+}
+
+@keyframes changesection5Images {
+  0%, 100% {
+    background: url("images/services/Spachtelarbeiten1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  33% {
+    background: url("images/services/Spachtelarbeiten2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  66% {
+    background: url("images/services/Spachtelarbeiten3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+} 
+
+#section6 {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/Altbausanierung1.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changesection6Images 7s infinite;
+}
+
+@keyframes changesection6Images {
+  0%, 100% {
+    background: url("images/services/Altbausanierung1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  33% {
+    background: url("images/services/Altbausanierung2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  66% {
+    background: url("images/services/Altbausanierung3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+} 
+
+#section7 {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  background: url("images/services/Malerarbeiten4.jpg") center bottom no-repeat;
+  background-size: cover;
+  animation: changesection7Images 12s infinite;
+}
+
+@keyframes changesection7Images {
+  0%, 25% {
+    background: url("images/services/Malerarbeiten1.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  25%, 50% {
+    background: url("images/services/Malerarbeiten2.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  50%, 75% {
+    background: url("images/services/Malerarbeiten3.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+  75%, 100% {
+    background: url("images/services/Malerarbeiten4.jpg") center bottom no-repeat;
+    background-size: cover;
+  }
+}
+
+
+</style>
 </head>
 
 <body>
@@ -91,90 +627,180 @@
   </div>
 </section>
 
-<section class="section blog-wrap bg-gray">
-    <div class="container">
-        <div class="row">
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/1.jpg" alt="" class="img-fluid rounded">
 
-			<div class="blog-item-content bg-white p-5">
-
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">Renovierungsarbeiten</a></h3>
-				<p class="mb-4">Durch umfassende Renovierungsarbeiten verwandeln wir alte Räume in moderne und zeitgemäße Umgebungen, die jeden Teil des Raums neu gestalten und verbessern, um den Anforderungen unserer Kunden gerecht zu werden</p>
-
+<section class="section intro" style="padding-bottom: 0px;">
+	<div class="container">
+		<div class="row justify-content-center"> <!-- Center the row content -->
+			<div class="col-lg-8">
+				<div class="section-title text-center"> <!-- Center-align the text -->
+					<span class="h6 text-color">Unsere Dienstleistungen</span>
+					<h2 class="mt-3 content-title">Wir bieten eine breite Palette kreativer Dienstleistungen an</h2>
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/2.jpg" alt="" class="img-fluid rounded">
-
-			<div class="blog-item-content bg-white p-5"> 
-
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">Tapezieren</a></h3>
-				<p class="mb-4">Wir bieten eine Vielzahl hochwertiger Tapetenlösungen an und sorgen für eine professionelle Installation, die die Schönheit und Attraktivität der Räume verstärkt und eine elegante Note zur Innenraumgestaltung hinzufügt.</p>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/3.jpg" alt="" class="img-fluid rounded">
-
-			<div class="blog-item-content bg-white p-5"> 
-
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">Fliesenleger</a></h3>
-				<p class="mb-4">
-					Professionelle Fliesenverlegung mit hoher Präzision und Verwendung der besten Materialien, um ein perfektes und langlebiges Finish zu gewährleisten. Als Experten garantieren wir höchste Qualität und Zufriedenheit.</p>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/4.jpg" alt="" class="img-fluid rounded">
-
-			<div class="blog-item-content bg-white p-5">
-
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">Trockenbau</a></h3>
-				<p class="mb-4">Professionelle Gestaltung und Installation von Trockenbauwänden (Gipskarton), einschließlich Raumaufteilung und moderner Akzente, die den verschiedenen Bedürfnissen entsprechen.</p>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/5.jpg" alt="" class="img-fluid rounded">
-
-			<div class="blog-item-content bg-white p-5">
-
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">Laminat Verlegen</a></h3>
-				<p class="mb-4">Verlegung von Laminatböden in hoher Qualität und mit präziser Ausführung, um verschiedenen Räumen eine warme und natürliche Note zu verleihen. Als erfahrene Handwerker bieten wir.</p>
-
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-6 col-md-6 mb-5">
-		<div class="blog-item">
-			<img src="images/blog/6.jpg" alt="" class="img-fluid rounded">
-
-			<div class="blog-item-content bg-white p-5">
-
-				<h3 class="mt-3 mb-3"><a href="blog-single.html">Spachtelarbeiten</a></h3>
-				<p class="mb-4">Ausführung von Spachtelarbeiten zur Glättung und Vorbereitung der Oberflächen vor dem Streichen, um eine glatte und makellose Basis für das Endanstrich zu gewährleisten.</p>
-
-			</div>
-		</div>
-	</div>
-</div>
-
-
-    </div>
 </section>
 
+<section class="about_section">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6" data-aos="fade-up">
+		  <div class="detail-box">
+			<div class="heading_container">
+			  <h2>Tapezieren</h2>
+			</div>
+			<p>
+        Wir bieten eine Vielzahl hochwertiger Tapetenlösungen an und sorgen für eine professionelle Installation, die die Schönheit und Attraktivität der Räume verstärkt und eine elegante Note zur Innenraumgestaltung hinzufügt.			</p>
+		  </div>
+		</div>
+		<div class="col-md-6" data-aos="fade-left">
+		  <div class="img-box rotating-images">
+			<div class="trasns-img" id="hero"></div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  
+  
+<section class="about_section">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6" data-aos="fade-left">
+			<div class="img-box">
+			<div class="trasns-img" id="section2"></div>
+			</div>
+		  </div>
+		<div class="col-md-6" data-aos="fade-up">
+		  <div class="detail-box">
+			<div class="heading_container">
+			  <h2>Fliesenleger</h2>
+			</div>
+			<p>
+        Professionelle Fliesenverlegung mit hoher Präzision und Verwendung der besten Materialien, um ein perfektes und langlebiges Finish zu gewährleisten. Als Experten garantieren wir höchste Qualität und Zufriedenheit.			
+      </p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+
+  <!-- service 3 -->
+
+  <section class="about_section">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6" data-aos="fade-up">
+		  <div class="detail-box">
+			<div class="heading_container">
+			  <h2>Rigips</h2>
+			</div>
+			<p>
+        Professionelle Gestaltung und Installation von Trockenbauwänden (Gipskarton), einschließlich Raumaufteilung und moderner Akzente, die den verschiedenen Bedürfnissen entsprechen.
+      </p>
+		  </div>
+		</div>
+		<div class="col-md-6" data-aos="fade-left">
+		  <div class="img-box">
+			<div class="trasns-img" id="section3"></div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <!-- servise 4 -->
+  <section class="about_section">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6" data-aos="fade-left">
+			<div class="img-box">
+			<div class="trasns-img" id="section4"></div>
+			</div>
+		  </div>
+		<div class="col-md-6" data-aos="fade-up">
+		  <div class="detail-box">
+			<div class="heading_container">
+			  <h2>Laminat Verlegen</h2>
+			</div>
+			<p>
+        Verlegung von Laminatböden in hoher Qualität und mit präziser Ausführung, um verschiedenen Räumen eine warme und natürliche Note zu verleihen. Als erfahrene Handwerker bieten wir.
+      </p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <!-- service 5 -->
+
+  <section class="about_section">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6" data-aos="fade-up">
+		  <div class="detail-box">
+			<div class="heading_container">
+			  <h2>Spachtelarbeiten</h2>
+			</div>
+			<p>
+        Ausführung von Spachtelarbeiten zur Glättung und Vorbereitung der Oberflächen vor dem Streichen, um eine glatte und makellose Basis für das Endanstrich zu gewährleisten.
+      </p>
+		  </div>
+		</div>
+		<div class="col-md-6" data-aos="fade-left">
+		  <div class="img-box">
+			<div class="trasns-img" id="section5"></div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <!-- section6 -->
+
+  <section class="about_section">
+    <div class="container">
+      <div class="row">
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="img-box">
+        <div class="trasns-img" id="section6"></div>
+        </div>
+        </div>
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="detail-box">
+        <div class="heading_container">
+          <h2>Altbausanierung :<br>Für Sie machen wir aus alt , neu</h2>
+        </div>
+        <p>
+          Durch umfassende Renovierungsarbeiten verwandeln wir alte Räume in moderne und zeitgemäße Umgebungen, die jeden Teil des Raums neu gestalten und verbessern, um den Anforderungen unserer Kunden gerecht zu werden.        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+
+    
+  <section class="about_section">
+    <div class="container">
+      <div class="row">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="detail-box">
+        <div class="heading_container">
+          <h2>Malerarbeiten</h2>
+        </div>
+        <p>
+          Wir bieten hochwertige Malerarbeiten an, die eine Vielzahl von Farben und Oberflächen umfassen und den Innen- und Außenbereichen einen Hauch von Eleganz und Frische verleihen. Mit größter Sorgfalt sorgen wir für eine professionelle Ausführung, die ein harmonisches und ästhetisches Erscheinungsbild schafft und die Individualität des Raumes unterstreicht.
+        </p>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="img-box">
+        <div class="trasns-img" id="section7"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
 
 <!-- footer Start -->
 <footer class="footer section">
@@ -272,5 +898,113 @@
     
     <script src="js/script.js"></script>
 
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				} else {
+					entry.target.classList.remove('visible'); // إزالة الفئة عند الخروج من نافذة العرض
+				}
+			});
+		});
+	  
+		const textOverlay = document.querySelector('.text-overlay');
+		observer.observe(textOverlay);
+	  });
+	  
+	  </script>
+		
+	  <script>
+		// Wrap every letter in a span
+		var textWrapper = document.querySelector('.ml10 .letters');
+		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+		
+		anime.timeline({loop: true})
+		  .add({
+			targets: '.ml10 .letter',
+			rotateY: [-90, 0],
+			duration: 1300,
+			delay: (el, i) => 45 * i
+		  }).add({
+			targets: '.ml10',
+			opacity: 0,
+			duration: 1000,
+			easing: "easeOutExpo",
+			delay: 1000
+		  });
+	  </script>
+	  
+	  
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+	  
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	  
+	  <script>
+	  AOS.init({
+		once: false // تكرار الحركة عند التمرير
+	  });
+	  </script>
+	  
+	  <script>
+	  // عندما يتم تحميل الصفحة بالكامل
+	  window.onscroll = function() {
+		stickyNavbar();
+	  };
+	  
+	  var navbar = document.querySelector(".site-navbar");
+	  var sticky = navbar.offsetTop; // موقع الهيدر من أعلى الصفحة
+	  
+	  function stickyNavbar() {
+		if (window.pageYOffset > sticky) {
+		  navbar.classList.add("sticky");
+		} else {
+		  navbar.classList.remove("sticky");
+		}
+	  }
+	  </script>
+	  
+	  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	  <script>
+		// تفعيل AOS
+		document.addEventListener('DOMContentLoaded', function() {
+	  AOS.init({
+		duration: 1200, // 
+		easing: 'ease-in-out', //
+		offset: 150, // 
+		once: false, // 
+		anchorPlacement: 'top-bottom', // 
+	  });
+	  });
+	  
+	  </script>
+	  
+	  <script>
+	  document.addEventListener('DOMContentLoaded', () => {
+	  const coreValuesText = document.querySelector('.core-values-text');
+	  const coreValuesImage = document.querySelector('.core-values-image');
+	  
+	  const animateOnScroll = () => {
+		const { top } = document.querySelector('.core_values_section').getBoundingClientRect();
+		const viewportHeight = window.innerHeight;
+	  
+		if (top < viewportHeight) {
+		  coreValuesText.classList.add('animate__fadeInLeft');
+		  coreValuesImage.classList.add('animate__fadeInRight');
+		} else {
+		  coreValuesText.classList.remove('animate__fadeInLeft');
+		  coreValuesImage.classList.remove('animate__fadeInRight');
+		}
+	  };
+	  
+	  window.addEventListener('scroll', animateOnScroll);
+	  animateOnScroll(); // For initial load
+	  });
+	  
+	  </script>
+	  
+	  
   </body>
   </html>
