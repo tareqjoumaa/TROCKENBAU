@@ -52,7 +52,12 @@ p {
 }
 
 .navbar-toggle .icon-bar {
-  background: #d4960a;
+  background: red;
+}
+.pb-4, .py-4{
+  padding-bottom :1px !important;
+  padding-top :0px !important
+
 }
 
 input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
@@ -64,7 +69,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
 
 input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus {
   box-shadow: none;
-  border: 1px solid #d4960a;
+  border: 1px solid red;
 }
 
 .form-control {
@@ -74,7 +79,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid #d4960a;
+  border: 1px solid red;
 }
 
 .py-7 {
@@ -111,30 +116,30 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .btn-main:hover, .btn-transparent:hover, .btn-small:hover {
-  background: #d1960a;
+  background: red;
   color: #000000;
 }
 
 .btn-solid-border {
-  border: 2px solid #d4960a;
+  border: 2px solid red;
   background: transparent;
   color: #242424;
 }
 
 .btn-solid-border:hover {
-  border: 2px solid #d4960a;
-  background: #d4960a;
+  border: 2px solid #808080;
+  background: red;
 }
 
 .btn-transparent {
   background: transparent;
   padding: 0;
-  color: #d4960a;
+  color: red;
 }
 
 .btn-transparent:hover {
   background: transparent;
-  color: #d4960a;
+  color: red;
 }
 
 .btn-large {
@@ -171,7 +176,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .bg-primary {
-  background: #d4960a;
+  background: red;
 }
 
 .bg-primary-dark {
@@ -192,7 +197,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .section {
-  background-color: #fff8ea;
+  background-color: #ededff;
   padding: 100px 0;
 }
 
@@ -212,7 +217,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 
 .subtitle {
-  color: #d4960a;
+  color: red;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -251,7 +256,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .text-color {
-  color: #d1960a;
+  color: red;
 }
 
 .text-black {
@@ -289,7 +294,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #d1960a;
+  color: red;
   text-decoration: none;
 }
 
@@ -307,7 +312,7 @@ a:focus {
 }
 
 .page-title .block h1 {
-  color: #dddc839c;
+  color: #fff;
 }
 
 .page-title .block p {
@@ -388,7 +393,7 @@ a:focus {
 }
 
 #navbar {
-  background: linear-gradient(to right , #ffffff, #b6986a); /* Add background color when scrolled */
+  background: linear-gradient(to right, #fdfdfd, #b6b6b6); /* Add background color when scrolled */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
@@ -407,7 +412,7 @@ a:focus {
 }
 
 #navbar .nav-link:hover, #navbar .nav-link:focus {
-  color: #d4960a;
+  color: red;
   transform: translateY(-5px); /* Adjust the value as needed */
   transition: transform 0.6s;
 }
@@ -455,7 +460,7 @@ a:focus {
 }
 
 .navbar-brand span {
-  color: #d4960a;
+  color: red;
 }
 
 .dropdown-menu {
@@ -492,7 +497,7 @@ a:focus {
 }
 
 .dropdown-item:hover {
-  background: #d4960a;
+  background: red;
   color: #fff;
 }
 
@@ -585,7 +590,7 @@ ul.dropdown-menu li {
 
 
 .color-one {
-  color: #d4960a;
+  color: red;
 }
 
 .color-two {
@@ -743,11 +748,11 @@ ul.dropdown-menu li {
   left: 0px;
   top: 5px;
   font-size: 50px;
-  opacity: .4;
+  opacity: 1;
 }
 
 .service-item i {
-  color: #d1960a; /* Set the icon color to red */
+  color: red; /* Set the icon color to red */
   
 }
 
@@ -818,7 +823,7 @@ ul.dropdown-menu li {
 }
 
 .pricing .btn-solid-border:Hover {
-  border-color: #d4960a;
+  border-color: red;
 }
 
 .portflio-item .portfolio-item-content {
@@ -864,7 +869,7 @@ ul.dropdown-menu li {
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  color: #d4960a;
+  color: red;
   opacity: 0;
   transition: all .35s ease;
 }
@@ -937,7 +942,7 @@ ul.dropdown-menu li {
 }
 
 .blog-item-content h3 a:hover {
-  color: #d4960a !important;
+  color: red !important;
 }
 
 .lh-36 {
@@ -981,7 +986,7 @@ h3.quote::before {
   content: '';
   width: 55px;
   height: 2px;
-  background: #d4960a;
+  background: red;
   position: absolute;
   top: 25px;
   left: 0;
@@ -1002,7 +1007,7 @@ h3.quote::before {
 }
 
 .border-1 {
-  background-color: #fff8ea;
+  background-color: #ededff;
   border: 1px solid rgba(0.5, 0, 0, 0);
 }
 
@@ -1053,7 +1058,7 @@ h3.quote::before {
 }
 
 .post-comments .comment-author a {
-  color: #d4960a;
+  color: red;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1066,7 +1071,7 @@ h3.quote::before {
 }
 
 .post-comments .comment-button {
-  color: #d4960a;
+  color: red;
   display: inline-block;
   margin-left: 5px;
   font-size: 12px;
@@ -1078,7 +1083,7 @@ h3.quote::before {
 }
 
 .post-comments .comment-button:hover {
-  color: #d4960a;
+  color: red;
 }
 
 .post-excerpt {
@@ -1100,7 +1105,7 @@ h3.quote::before {
 .post-excerpt blockquote.quote-post p {
   line-height: 30px;
   font-size: 20px;
-  color: #d4960a;
+  color: red;
 }
 
 .single-blog {
@@ -1129,7 +1134,7 @@ h3.quote::before {
 }
 
 .next-prev a:hover {
-  color: #d4960a;
+  color: red;
 }
 
 .next-prev .prev-post i {
@@ -1152,7 +1157,7 @@ h3.quote::before {
 }
 
 .social-profile ul li a i:hover {
-  color: #d4960a;
+  color: red;
 }
 
 .comments-section {
@@ -1200,7 +1205,7 @@ h3.quote::before {
 }
 
 .comment-wrap .media .media-heading a {
-  color: #d4960a;
+  color: red;
   font-size: 13px;
 }
 
@@ -1225,7 +1230,7 @@ h3.quote::before {
 
 .comment-reply-form input:focus, .comment-reply-form textarea:focus {
   box-shadow: none;
-  border: 1px solid #d4960a;
+  border: 1px solid red;
 }
 
 .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form .btn-transparent, .comment-reply-form .btn-small {
@@ -1275,7 +1280,7 @@ h3.quote::before {
 }
 
 .widget.widget-category ul li a:hover {
-  color: #d4960a;
+  color: red;
   padding-left: 5px;
 }
 
@@ -1297,8 +1302,8 @@ h3.quote::before {
 
 .widget.widget-tag ul li a:hover {
   color: #fff;
-  background: #d4960a;
-  border: 1px solid #d4960a;
+  background: red;
+  border: 1px solid red;
 }
 
 .footer {
@@ -1320,7 +1325,7 @@ h3.quote::before {
 }
 
 .logo span {
-  color: #d4960a;
+  color: red;
 }
 
 .sub-form {
